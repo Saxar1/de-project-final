@@ -1,0 +1,4 @@
+{"object_id": "c9f9f0a3-b5a4-4c60-9d88-4001a8727c83", "object_type": "TRANSACTION", "sent_dttm": "2022-10-01T01:52:51", "payload": {"operation_id": "c9f9f0a3-b5a4-4c60-9d88-4001a8727c83", "account_number_from": -1, "account_number_to": 11641, "currency_code": 430, "country": "russia", "status": "done", "transaction_type": "sbp_incoming", "amount": 20000, "transaction_dt": "2022-10-01 01:52:51"}}
+
+
+docker rm $(docker ps -qa). - удалить все контейнеры

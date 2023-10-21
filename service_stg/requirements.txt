@@ -1,0 +1,6 @@
+asyncio
+APScheduler
+confluent_kafka
+flask
+vertica_python
+pydantic

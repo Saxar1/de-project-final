@@ -1,0 +1,438 @@
+Attaching to stg_service_container
+[36mstg_service_container |[0m %7|1697910599.416|INIT|someclientkey#consumer-1| [thrd:app]: librdkafka v2.2.0 (0x20200ff) someclientkey#consumer-1 initialized (builtin.features gzip,snappy,ssl,sasl,regex,lz4,sasl_plain,sasl_scram,plugins,zstd,sasl_oauthbearer,http,oidc, STRIP STATIC_LINKING GCC GXX PKGCONFIG INSTALL GNULD LIBDL PLUGINS ZLIB SSL ZSTD CURL HDRHISTOGRAM SYSLOG SNAPPY SOCKEM SASL_SCRAM SASL_OAUTHBEARER OAUTHBEARER_OIDC CRC32C_HW, debug 0x4)
+[36mstg_service_container |[0m  * Serving Flask app 'app'
+[36mstg_service_container |[0m  * Debug mode: on
+[36mstg_service_container |[0m [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+[36mstg_service_container |[0m  * Running on all addresses (0.0.0.0)
+[36mstg_service_container |[0m  * Running on http://127.0.0.1:5000
+[36mstg_service_container |[0m  * Running on http://172.17.0.2:5000
+[36mstg_service_container |[0m [33mPress CTRL+C to quit[0m
+[36mstg_service_container |[0m %7|1697910600.429|LEADER|someclientkey#consumer-1| [thrd:sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/boots]: sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/1: Mapped 0 partition(s) to broker
+[36mstg_service_container |[0m %7|1697910601.240|METADATA|someclientkey#consumer-1| [thrd:main]: sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/1: 1/1 requested topic(s) seen in metadata
+[36mstg_service_container |[0m [2023-10-21 17:50:24,420] INFO in stg_message_processor_job: 2023-10-21 17:50:24.420838: START
+[36mstg_service_container |[0m %7|1697910624.421|TOPIC|someclientkey#consumer-1| [thrd:main]: New local topic: transaction-service-input
+[36mstg_service_container |[0m %7|1697910624.421|TOPPARNEW|someclientkey#consumer-1| [thrd:main]: NEW transaction-service-input [-1] 0x7fd338006de0 refcnt 0x7fd338006e70 (at rd_kafka_topic_new0:472)
+[36mstg_service_container |[0m %7|1697910624.421|STATE|someclientkey#consumer-1| [thrd:main]: Topic transaction-service-input changed state unknown -> exists
+[36mstg_service_container |[0m %7|1697910624.421|PARTCNT|someclientkey#consumer-1| [thrd:main]: Topic transaction-service-input partition count changed from 0 to 1
+[36mstg_service_container |[0m %7|1697910624.421|TOPPARNEW|someclientkey#consumer-1| [thrd:main]: NEW transaction-service-input [0] 0x7fd3380072a0 refcnt 0x7fd338007330 (at rd_kafka_topic_partition_cnt_update:911)
+[36mstg_service_container |[0m %7|1697910624.421|METADATA|someclientkey#consumer-1| [thrd:main]:   Topic transaction-service-input partition 0 Leader 1 Epoch 0
+[36mstg_service_container |[0m %7|1697910624.421|BROKER|someclientkey#consumer-1| [thrd:main]: transaction-service-input [0]: leader -1 epoch -1 -> leader 1 epoch 0
+[36mstg_service_container |[0m %7|1697910624.421|BRKDELGT|someclientkey#consumer-1| [thrd:main]: transaction-service-input [0]: delegate to broker sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/1 (rktp 0x7fd3380072a0, term 0, ref 2)
+[36mstg_service_container |[0m %7|1697910624.421|BRKDELGT|someclientkey#consumer-1| [thrd:main]: transaction-service-input [0]: delegating to broker sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/1 for partition with 0 messages (0 bytes) queued
+[36mstg_service_container |[0m %7|1697910624.421|BRKMIGR|someclientkey#consumer-1| [thrd:main]: Migrating topic transaction-service-input [0] 0x7fd3380072a0 from (none) to sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/1 (sending PARTITION_JOIN to sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/1)
+[36mstg_service_container |[0m %7|1697910624.421|DESIRED|someclientkey#consumer-1| [thrd:main]: transaction-service-input [0]: marking as DESIRED
+[36mstg_service_container |[0m %7|1697910624.421|RESUME|someclientkey#consumer-1| [thrd:main]: Library resuming 1 partition(s)
+[36mstg_service_container |[0m %7|1697910624.421|TOPBRK|someclientkey#consumer-1| [thrd:sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/boots]: sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/1: Topic transaction-service-input [0]: joining broker (rktp 0x7fd3380072a0, 0 message(s) queued)
+[36mstg_service_container |[0m %7|1697910624.421|BARRIER|someclientkey#consumer-1| [thrd:main]: transaction-service-input [0]: rd_kafka_toppar_op_pause_resume:2271: new version barrier v2
+[36mstg_service_container |[0m %7|1697910624.421|RESUME|someclientkey#consumer-1| [thrd:main]: Resume transaction-service-input [0] (v2)
+[36mstg_service_container |[0m %7|1697910624.421|OFFSET|someclientkey#consumer-1| [thrd:main]: GroupCoordinator/1: Group producer_consumer OffsetFetchRequest(v7) for 1/1 partition(s)
+[36mstg_service_container |[0m %7|1697910624.421|OP|someclientkey#consumer-1| [thrd:main]: transaction-service-input [0] received op PAUSE (v2) in fetch-state none (opv1)
+[36mstg_service_container |[0m %7|1697910624.421|RESUME|someclientkey#consumer-1| [thrd:main]: Not resuming transaction-service-input [0]: partition is not paused by library
+[36mstg_service_container |[0m %7|1697910624.525|OFFSETFETCH|someclientkey#consumer-1| [thrd:main]: GroupCoordinator/1: OffsetFetchResponse: transaction-service-input [0] offset -1, leader epoch -1, metadata 0 byte(s): NO_ERROR
+[36mstg_service_container |[0m %7|1697910624.525|OFFFETCH|someclientkey#consumer-1| [thrd:main]: GroupCoordinator/1: OffsetFetch for 1/1 partition(s) (0 unstable partition(s)) returned Success
+[36mstg_service_container |[0m %7|1697910624.525|BARRIER|someclientkey#consumer-1| [thrd:main]: transaction-service-input [0]: rd_kafka_toppar_op_pause_resume:2271: new version barrier v3
+[36mstg_service_container |[0m %7|1697910624.525|RESUME|someclientkey#consumer-1| [thrd:main]: Resume transaction-service-input [0] (v3)
+[36mstg_service_container |[0m %7|1697910624.525|BARRIER|someclientkey#consumer-1| [thrd:main]: transaction-service-input [0]: rd_kafka_toppar_op_fetch_start:2185: new version barrier v4
+[36mstg_service_container |[0m %7|1697910624.525|CONSUMER|someclientkey#consumer-1| [thrd:main]: Start consuming transaction-service-input [0] at offset INVALID (leader epoch -1) (v4)
+[36mstg_service_container |[0m %7|1697910624.525|OP|someclientkey#consumer-1| [thrd:main]: transaction-service-input [0] received op PAUSE (v3) in fetch-state none (opv2)
+[36mstg_service_container |[0m %7|1697910624.525|RESUME|someclientkey#consumer-1| [thrd:main]: Not resuming transaction-service-input [0]: partition is not paused by library
+[36mstg_service_container |[0m %7|1697910624.525|OP|someclientkey#consumer-1| [thrd:main]: transaction-service-input [0] received op FETCH_START (v4) in fetch-state none (opv3)
+[36mstg_service_container |[0m %7|1697910624.525|FETCH|someclientkey#consumer-1| [thrd:main]: Start fetch for transaction-service-input [0] in state none at offset INVALID (leader epoch -1) (v4)
+[36mstg_service_container |[0m %7|1697910624.526|PARTSTATE|someclientkey#consumer-1| [thrd:main]: Partition transaction-service-input [0] changed fetch state none -> offset-query
+[36mstg_service_container |[0m %7|1697910624.526|OFFSET|someclientkey#consumer-1| [thrd:main]: transaction-service-input [0]: offset reset (at offset INVALID (leader epoch -1), broker -1) to offset BEGINNING (leader epoch -1): no previously committed offset available: Local: No offset stored
+[36mstg_service_container |[0m %7|1697910624.526|OFFSET|someclientkey#consumer-1| [thrd:main]: transaction-service-input [0]: backoff: (re)starting offset query timer for offset BEGINNING (leader epoch -1)
+[36mstg_service_container |[0m %7|1697910624.626|OFFSET|someclientkey#consumer-1| [thrd:main]: Topic transaction-service-input [0]: timed offset query for offset BEGINNING (leader epoch -1) in state offset-query
+[36mstg_service_container |[0m %7|1697910624.626|OFFREQ|someclientkey#consumer-1| [thrd:main]: sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/1: Partition transaction-service-input [0]: querying for logical offset BEGINNING (opv 4)
+[36mstg_service_container |[0m %7|1697910624.626|PARTSTATE|someclientkey#consumer-1| [thrd:main]: Partition transaction-service-input [0] changed fetch state offset-query -> offset-wait
+[36mstg_service_container |[0m %7|1697910624.626|OFFSET|someclientkey#consumer-1| [thrd:sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/boots]: sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/1: ListOffsetsRequest (v5, opv 4) for 1 topic(s) and 1 partition(s)
+[36mstg_service_container |[0m %7|1697910624.730|OFFSET|someclientkey#consumer-1| [thrd:main]: sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/1: Offset reply for topic transaction-service-input [0] (v4 vs v4)
+[36mstg_service_container |[0m %7|1697910624.730|OFFSET|someclientkey#consumer-1| [thrd:main]: Offset BEGINNING request for transaction-service-input [0] returned offset 0 (0) leader epoch 0
+[36mstg_service_container |[0m %7|1697910624.730|PARTSTATE|someclientkey#consumer-1| [thrd:main]: Partition transaction-service-input [0] changed fetch state offset-wait -> active
+[36mstg_service_container |[0m %7|1697910624.730|FETCH|someclientkey#consumer-1| [thrd:main]: Partition transaction-service-input [0] start fetching at offset 0 (leader epoch 0)
+[36mstg_service_container |[0m %7|1697910624.730|FETCHDEC|someclientkey#consumer-1| [thrd:sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/boots]: Topic transaction-service-input [0]: fetch decide: updating to version 4 (was 0) at offset 0 (leader epoch 0) (was offset 0 (leader epoch -1))
+[36mstg_service_container |[0m %7|1697910624.730|FETCHADD|someclientkey#consumer-1| [thrd:sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/boots]: sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/1: Added transaction-service-input [0] to fetch list (1 entries, opv 4, 0 messages queued): fetchable
+[36mstg_service_container |[0m [2023-10-21 17:50:25,618] INFO in stg_message_processor_job: 2023-10-21 17:50:25.618703: Message received
+[36mstg_service_container |[0m Job "StgMessageProcessor.run (trigger: interval[0:00:25], next run at: 2023-10-21 17:50:49 UTC)" raised an exception
+[36mstg_service_container |[0m Traceback (most recent call last):
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 125, in run_job
+[36mstg_service_container |[0m     retval = job.func(*job.args, **job.kwargs)
+[36mstg_service_container |[0m   File "/src/stg_loader/stg_message_processor_job.py", line 32, in run
+[36mstg_service_container |[0m     if msg["object_type"] == "TRANSACTION":
+[36mstg_service_container |[0m KeyError: 'object_type'
+[36mstg_service_container |[0m %7|1697910637.437|FETCHADD|someclientkey#consumer-1| [thrd:sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/boots]: sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/1: Removed transaction-service-input [0] from fetch list (0 entries, opv 4): queued.min.messages exceeded
+[36mstg_service_container |[0m [2023-10-21 17:50:49,420] INFO in stg_message_processor_job: 2023-10-21 17:50:49.420668: START
+[36mstg_service_container |[0m [2023-10-21 17:50:49,421] INFO in stg_message_processor_job: 2023-10-21 17:50:49.421051: Message received
+[36mstg_service_container |[0m /usr/local/lib/python3.10/site-packages/vertica_python/vertica/connection.py:659: UserWarning: [INFO] Cannot rollback; no transaction in progress
+[36mstg_service_container |[0m   warnings.warn(notice)
+[36mstg_service_container |[0m Job "StgMessageProcessor.run (trigger: interval[0:00:25], next run at: 2023-10-21 17:51:14 UTC)" raised an exception
+[36mstg_service_container |[0m Traceback (most recent call last):
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 125, in run_job
+[36mstg_service_container |[0m     retval = job.func(*job.args, **job.kwargs)
+[36mstg_service_container |[0m   File "/src/stg_loader/stg_message_processor_job.py", line 45, in run
+[36mstg_service_container |[0m     self._stg_repository.currencies_insert(
+[36mstg_service_container |[0m   File "/src/stg_loader/repository/stg_repository.py", line 18, in currencies_insert
+[36mstg_service_container |[0m     cur.execute(
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 185, in wrap
+[36mstg_service_container |[0m     return func(self, *args, **kwargs)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 258, in execute
+[36mstg_service_container |[0m     operation = self.format_operation_with_parameters(operation, parameters)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 697, in format_operation_with_parameters
+[36mstg_service_container |[0m     raise ValueError(f'Invalid SQL: {operation}'
+[36mstg_service_container |[0m ValueError: Invalid SQL: 
+[36mstg_service_container |[0m                         INSERT INTO ST23052702__STAGING.currencies (
+[36mstg_service_container |[0m                             date_update,
+[36mstg_service_container |[0m                             currency_code,
+[36mstg_service_container |[0m                             currency_code_with,
+[36mstg_service_container |[0m                             currency_with_div
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                         VALUES (
+[36mstg_service_container |[0m                             %(date_update)s,
+[36mstg_service_container |[0m                             %(currency_code)s,
+[36mstg_service_container |[0m                             %(currency_code_with)s,
+[36mstg_service_container |[0m                             %(currency_with_div)s
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                     
+[36mstg_service_container |[0m HINT: When argument 'parameters' is a dict, variables in SQL should be specified with named (:name) placeholders. If you use a dict to represent the value of a ROW type column, enclose the dict with brackets('[]') to construct a list.
+[36mstg_service_container |[0m [2023-10-21 17:51:14,420] INFO in stg_message_processor_job: 2023-10-21 17:51:14.420868: START
+[36mstg_service_container |[0m [2023-10-21 17:51:14,421] INFO in stg_message_processor_job: 2023-10-21 17:51:14.421262: Message received
+[36mstg_service_container |[0m Job "StgMessageProcessor.run (trigger: interval[0:00:25], next run at: 2023-10-21 17:51:39 UTC)" raised an exception
+[36mstg_service_container |[0m Traceback (most recent call last):
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 125, in run_job
+[36mstg_service_container |[0m     retval = job.func(*job.args, **job.kwargs)
+[36mstg_service_container |[0m   File "/src/stg_loader/stg_message_processor_job.py", line 45, in run
+[36mstg_service_container |[0m     self._stg_repository.currencies_insert(
+[36mstg_service_container |[0m   File "/src/stg_loader/repository/stg_repository.py", line 18, in currencies_insert
+[36mstg_service_container |[0m     cur.execute(
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 185, in wrap
+[36mstg_service_container |[0m     return func(self, *args, **kwargs)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 258, in execute
+[36mstg_service_container |[0m     operation = self.format_operation_with_parameters(operation, parameters)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 697, in format_operation_with_parameters
+[36mstg_service_container |[0m     raise ValueError(f'Invalid SQL: {operation}'
+[36mstg_service_container |[0m ValueError: Invalid SQL: 
+[36mstg_service_container |[0m                         INSERT INTO ST23052702__STAGING.currencies (
+[36mstg_service_container |[0m                             date_update,
+[36mstg_service_container |[0m                             currency_code,
+[36mstg_service_container |[0m                             currency_code_with,
+[36mstg_service_container |[0m                             currency_with_div
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                         VALUES (
+[36mstg_service_container |[0m                             %(date_update)s,
+[36mstg_service_container |[0m                             %(currency_code)s,
+[36mstg_service_container |[0m                             %(currency_code_with)s,
+[36mstg_service_container |[0m                             %(currency_with_div)s
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                     
+[36mstg_service_container |[0m HINT: When argument 'parameters' is a dict, variables in SQL should be specified with named (:name) placeholders. If you use a dict to represent the value of a ROW type column, enclose the dict with brackets('[]') to construct a list.
+[36mstg_service_container |[0m [2023-10-21 17:51:39,420] INFO in stg_message_processor_job: 2023-10-21 17:51:39.420700: START
+[36mstg_service_container |[0m [2023-10-21 17:51:39,421] INFO in stg_message_processor_job: 2023-10-21 17:51:39.421171: Message received
+[36mstg_service_container |[0m Job "StgMessageProcessor.run (trigger: interval[0:00:25], next run at: 2023-10-21 17:52:04 UTC)" raised an exception
+[36mstg_service_container |[0m Traceback (most recent call last):
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 125, in run_job
+[36mstg_service_container |[0m     retval = job.func(*job.args, **job.kwargs)
+[36mstg_service_container |[0m   File "/src/stg_loader/stg_message_processor_job.py", line 45, in run
+[36mstg_service_container |[0m     self._stg_repository.currencies_insert(
+[36mstg_service_container |[0m   File "/src/stg_loader/repository/stg_repository.py", line 18, in currencies_insert
+[36mstg_service_container |[0m     cur.execute(
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 185, in wrap
+[36mstg_service_container |[0m     return func(self, *args, **kwargs)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 258, in execute
+[36mstg_service_container |[0m     operation = self.format_operation_with_parameters(operation, parameters)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 697, in format_operation_with_parameters
+[36mstg_service_container |[0m     raise ValueError(f'Invalid SQL: {operation}'
+[36mstg_service_container |[0m ValueError: Invalid SQL: 
+[36mstg_service_container |[0m                         INSERT INTO ST23052702__STAGING.currencies (
+[36mstg_service_container |[0m                             date_update,
+[36mstg_service_container |[0m                             currency_code,
+[36mstg_service_container |[0m                             currency_code_with,
+[36mstg_service_container |[0m                             currency_with_div
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                         VALUES (
+[36mstg_service_container |[0m                             %(date_update)s,
+[36mstg_service_container |[0m                             %(currency_code)s,
+[36mstg_service_container |[0m                             %(currency_code_with)s,
+[36mstg_service_container |[0m                             %(currency_with_div)s
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                     
+[36mstg_service_container |[0m HINT: When argument 'parameters' is a dict, variables in SQL should be specified with named (:name) placeholders. If you use a dict to represent the value of a ROW type column, enclose the dict with brackets('[]') to construct a list.
+[36mstg_service_container |[0m [2023-10-21 17:52:04,420] INFO in stg_message_processor_job: 2023-10-21 17:52:04.420677: START
+[36mstg_service_container |[0m [2023-10-21 17:52:04,421] INFO in stg_message_processor_job: 2023-10-21 17:52:04.421032: Message received
+[36mstg_service_container |[0m Job "StgMessageProcessor.run (trigger: interval[0:00:25], next run at: 2023-10-21 17:52:29 UTC)" raised an exception
+[36mstg_service_container |[0m Traceback (most recent call last):
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 125, in run_job
+[36mstg_service_container |[0m     retval = job.func(*job.args, **job.kwargs)
+[36mstg_service_container |[0m   File "/src/stg_loader/stg_message_processor_job.py", line 45, in run
+[36mstg_service_container |[0m     self._stg_repository.currencies_insert(
+[36mstg_service_container |[0m   File "/src/stg_loader/repository/stg_repository.py", line 18, in currencies_insert
+[36mstg_service_container |[0m     cur.execute(
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 185, in wrap
+[36mstg_service_container |[0m     return func(self, *args, **kwargs)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 258, in execute
+[36mstg_service_container |[0m     operation = self.format_operation_with_parameters(operation, parameters)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 697, in format_operation_with_parameters
+[36mstg_service_container |[0m     raise ValueError(f'Invalid SQL: {operation}'
+[36mstg_service_container |[0m ValueError: Invalid SQL: 
+[36mstg_service_container |[0m                         INSERT INTO ST23052702__STAGING.currencies (
+[36mstg_service_container |[0m                             date_update,
+[36mstg_service_container |[0m                             currency_code,
+[36mstg_service_container |[0m                             currency_code_with,
+[36mstg_service_container |[0m                             currency_with_div
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                         VALUES (
+[36mstg_service_container |[0m                             %(date_update)s,
+[36mstg_service_container |[0m                             %(currency_code)s,
+[36mstg_service_container |[0m                             %(currency_code_with)s,
+[36mstg_service_container |[0m                             %(currency_with_div)s
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                     
+[36mstg_service_container |[0m HINT: When argument 'parameters' is a dict, variables in SQL should be specified with named (:name) placeholders. If you use a dict to represent the value of a ROW type column, enclose the dict with brackets('[]') to construct a list.
+[36mstg_service_container |[0m [2023-10-21 17:52:29,420] INFO in stg_message_processor_job: 2023-10-21 17:52:29.420662: START
+[36mstg_service_container |[0m [2023-10-21 17:52:29,420] INFO in stg_message_processor_job: 2023-10-21 17:52:29.420893: Message received
+[36mstg_service_container |[0m Job "StgMessageProcessor.run (trigger: interval[0:00:25], next run at: 2023-10-21 17:52:54 UTC)" raised an exception
+[36mstg_service_container |[0m Traceback (most recent call last):
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 125, in run_job
+[36mstg_service_container |[0m     retval = job.func(*job.args, **job.kwargs)
+[36mstg_service_container |[0m   File "/src/stg_loader/stg_message_processor_job.py", line 45, in run
+[36mstg_service_container |[0m     self._stg_repository.currencies_insert(
+[36mstg_service_container |[0m   File "/src/stg_loader/repository/stg_repository.py", line 18, in currencies_insert
+[36mstg_service_container |[0m     cur.execute(
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 185, in wrap
+[36mstg_service_container |[0m     return func(self, *args, **kwargs)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 258, in execute
+[36mstg_service_container |[0m     operation = self.format_operation_with_parameters(operation, parameters)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 697, in format_operation_with_parameters
+[36mstg_service_container |[0m     raise ValueError(f'Invalid SQL: {operation}'
+[36mstg_service_container |[0m ValueError: Invalid SQL: 
+[36mstg_service_container |[0m                         INSERT INTO ST23052702__STAGING.currencies (
+[36mstg_service_container |[0m                             date_update,
+[36mstg_service_container |[0m                             currency_code,
+[36mstg_service_container |[0m                             currency_code_with,
+[36mstg_service_container |[0m                             currency_with_div
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                         VALUES (
+[36mstg_service_container |[0m                             %(date_update)s,
+[36mstg_service_container |[0m                             %(currency_code)s,
+[36mstg_service_container |[0m                             %(currency_code_with)s,
+[36mstg_service_container |[0m                             %(currency_with_div)s
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                     
+[36mstg_service_container |[0m HINT: When argument 'parameters' is a dict, variables in SQL should be specified with named (:name) placeholders. If you use a dict to represent the value of a ROW type column, enclose the dict with brackets('[]') to construct a list.
+[36mstg_service_container |[0m [2023-10-21 17:52:54,420] INFO in stg_message_processor_job: 2023-10-21 17:52:54.420804: START
+[36mstg_service_container |[0m [2023-10-21 17:52:54,421] INFO in stg_message_processor_job: 2023-10-21 17:52:54.421171: Message received
+[36mstg_service_container |[0m Job "StgMessageProcessor.run (trigger: interval[0:00:25], next run at: 2023-10-21 17:53:19 UTC)" raised an exception
+[36mstg_service_container |[0m Traceback (most recent call last):
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 125, in run_job
+[36mstg_service_container |[0m     retval = job.func(*job.args, **job.kwargs)
+[36mstg_service_container |[0m   File "/src/stg_loader/stg_message_processor_job.py", line 45, in run
+[36mstg_service_container |[0m     self._stg_repository.currencies_insert(
+[36mstg_service_container |[0m   File "/src/stg_loader/repository/stg_repository.py", line 18, in currencies_insert
+[36mstg_service_container |[0m     cur.execute(
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 185, in wrap
+[36mstg_service_container |[0m     return func(self, *args, **kwargs)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 258, in execute
+[36mstg_service_container |[0m     operation = self.format_operation_with_parameters(operation, parameters)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 697, in format_operation_with_parameters
+[36mstg_service_container |[0m     raise ValueError(f'Invalid SQL: {operation}'
+[36mstg_service_container |[0m ValueError: Invalid SQL: 
+[36mstg_service_container |[0m                         INSERT INTO ST23052702__STAGING.currencies (
+[36mstg_service_container |[0m                             date_update,
+[36mstg_service_container |[0m                             currency_code,
+[36mstg_service_container |[0m                             currency_code_with,
+[36mstg_service_container |[0m                             currency_with_div
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                         VALUES (
+[36mstg_service_container |[0m                             %(date_update)s,
+[36mstg_service_container |[0m                             %(currency_code)s,
+[36mstg_service_container |[0m                             %(currency_code_with)s,
+[36mstg_service_container |[0m                             %(currency_with_div)s
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                     
+[36mstg_service_container |[0m HINT: When argument 'parameters' is a dict, variables in SQL should be specified with named (:name) placeholders. If you use a dict to represent the value of a ROW type column, enclose the dict with brackets('[]') to construct a list.
+[36mstg_service_container |[0m [2023-10-21 17:53:19,420] INFO in stg_message_processor_job: 2023-10-21 17:53:19.420944: START
+[36mstg_service_container |[0m [2023-10-21 17:53:19,421] INFO in stg_message_processor_job: 2023-10-21 17:53:19.421284: Message received
+[36mstg_service_container |[0m Job "StgMessageProcessor.run (trigger: interval[0:00:25], next run at: 2023-10-21 17:53:44 UTC)" raised an exception
+[36mstg_service_container |[0m Traceback (most recent call last):
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 125, in run_job
+[36mstg_service_container |[0m     retval = job.func(*job.args, **job.kwargs)
+[36mstg_service_container |[0m   File "/src/stg_loader/stg_message_processor_job.py", line 45, in run
+[36mstg_service_container |[0m     self._stg_repository.currencies_insert(
+[36mstg_service_container |[0m   File "/src/stg_loader/repository/stg_repository.py", line 18, in currencies_insert
+[36mstg_service_container |[0m     cur.execute(
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 185, in wrap
+[36mstg_service_container |[0m     return func(self, *args, **kwargs)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 258, in execute
+[36mstg_service_container |[0m     operation = self.format_operation_with_parameters(operation, parameters)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 697, in format_operation_with_parameters
+[36mstg_service_container |[0m     raise ValueError(f'Invalid SQL: {operation}'
+[36mstg_service_container |[0m ValueError: Invalid SQL: 
+[36mstg_service_container |[0m                         INSERT INTO ST23052702__STAGING.currencies (
+[36mstg_service_container |[0m                             date_update,
+[36mstg_service_container |[0m                             currency_code,
+[36mstg_service_container |[0m                             currency_code_with,
+[36mstg_service_container |[0m                             currency_with_div
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                         VALUES (
+[36mstg_service_container |[0m                             %(date_update)s,
+[36mstg_service_container |[0m                             %(currency_code)s,
+[36mstg_service_container |[0m                             %(currency_code_with)s,
+[36mstg_service_container |[0m                             %(currency_with_div)s
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                     
+[36mstg_service_container |[0m HINT: When argument 'parameters' is a dict, variables in SQL should be specified with named (:name) placeholders. If you use a dict to represent the value of a ROW type column, enclose the dict with brackets('[]') to construct a list.
+[36mstg_service_container |[0m [2023-10-21 17:53:44,420] INFO in stg_message_processor_job: 2023-10-21 17:53:44.420850: START
+[36mstg_service_container |[0m [2023-10-21 17:53:44,421] INFO in stg_message_processor_job: 2023-10-21 17:53:44.421241: Message received
+[36mstg_service_container |[0m Job "StgMessageProcessor.run (trigger: interval[0:00:25], next run at: 2023-10-21 17:54:09 UTC)" raised an exception
+[36mstg_service_container |[0m Traceback (most recent call last):
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 125, in run_job
+[36mstg_service_container |[0m     retval = job.func(*job.args, **job.kwargs)
+[36mstg_service_container |[0m   File "/src/stg_loader/stg_message_processor_job.py", line 45, in run
+[36mstg_service_container |[0m     self._stg_repository.currencies_insert(
+[36mstg_service_container |[0m   File "/src/stg_loader/repository/stg_repository.py", line 18, in currencies_insert
+[36mstg_service_container |[0m     cur.execute(
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 185, in wrap
+[36mstg_service_container |[0m     return func(self, *args, **kwargs)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 258, in execute
+[36mstg_service_container |[0m     operation = self.format_operation_with_parameters(operation, parameters)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 697, in format_operation_with_parameters
+[36mstg_service_container |[0m     raise ValueError(f'Invalid SQL: {operation}'
+[36mstg_service_container |[0m ValueError: Invalid SQL: 
+[36mstg_service_container |[0m                         INSERT INTO ST23052702__STAGING.currencies (
+[36mstg_service_container |[0m                             date_update,
+[36mstg_service_container |[0m                             currency_code,
+[36mstg_service_container |[0m                             currency_code_with,
+[36mstg_service_container |[0m                             currency_with_div
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                         VALUES (
+[36mstg_service_container |[0m                             %(date_update)s,
+[36mstg_service_container |[0m                             %(currency_code)s,
+[36mstg_service_container |[0m                             %(currency_code_with)s,
+[36mstg_service_container |[0m                             %(currency_with_div)s
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                     
+[36mstg_service_container |[0m HINT: When argument 'parameters' is a dict, variables in SQL should be specified with named (:name) placeholders. If you use a dict to represent the value of a ROW type column, enclose the dict with brackets('[]') to construct a list.
+[36mstg_service_container |[0m [2023-10-21 17:54:09,420] INFO in stg_message_processor_job: 2023-10-21 17:54:09.420867: START
+[36mstg_service_container |[0m [2023-10-21 17:54:09,421] INFO in stg_message_processor_job: 2023-10-21 17:54:09.421236: Message received
+[36mstg_service_container |[0m Job "StgMessageProcessor.run (trigger: interval[0:00:25], next run at: 2023-10-21 17:54:34 UTC)" raised an exception
+[36mstg_service_container |[0m Traceback (most recent call last):
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 125, in run_job
+[36mstg_service_container |[0m     retval = job.func(*job.args, **job.kwargs)
+[36mstg_service_container |[0m   File "/src/stg_loader/stg_message_processor_job.py", line 45, in run
+[36mstg_service_container |[0m     self._stg_repository.currencies_insert(
+[36mstg_service_container |[0m   File "/src/stg_loader/repository/stg_repository.py", line 18, in currencies_insert
+[36mstg_service_container |[0m     cur.execute(
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 185, in wrap
+[36mstg_service_container |[0m     return func(self, *args, **kwargs)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 258, in execute
+[36mstg_service_container |[0m     operation = self.format_operation_with_parameters(operation, parameters)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 697, in format_operation_with_parameters
+[36mstg_service_container |[0m     raise ValueError(f'Invalid SQL: {operation}'
+[36mstg_service_container |[0m ValueError: Invalid SQL: 
+[36mstg_service_container |[0m                         INSERT INTO ST23052702__STAGING.currencies (
+[36mstg_service_container |[0m                             date_update,
+[36mstg_service_container |[0m                             currency_code,
+[36mstg_service_container |[0m                             currency_code_with,
+[36mstg_service_container |[0m                             currency_with_div
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                         VALUES (
+[36mstg_service_container |[0m                             %(date_update)s,
+[36mstg_service_container |[0m                             %(currency_code)s,
+[36mstg_service_container |[0m                             %(currency_code_with)s,
+[36mstg_service_container |[0m                             %(currency_with_div)s
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                     
+[36mstg_service_container |[0m HINT: When argument 'parameters' is a dict, variables in SQL should be specified with named (:name) placeholders. If you use a dict to represent the value of a ROW type column, enclose the dict with brackets('[]') to construct a list.
+[36mstg_service_container |[0m [2023-10-21 17:54:34,420] INFO in stg_message_processor_job: 2023-10-21 17:54:34.420685: START
+[36mstg_service_container |[0m [2023-10-21 17:54:34,421] INFO in stg_message_processor_job: 2023-10-21 17:54:34.421115: Message received
+[36mstg_service_container |[0m Job "StgMessageProcessor.run (trigger: interval[0:00:25], next run at: 2023-10-21 17:54:59 UTC)" raised an exception
+[36mstg_service_container |[0m Traceback (most recent call last):
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 125, in run_job
+[36mstg_service_container |[0m     retval = job.func(*job.args, **job.kwargs)
+[36mstg_service_container |[0m   File "/src/stg_loader/stg_message_processor_job.py", line 45, in run
+[36mstg_service_container |[0m     self._stg_repository.currencies_insert(
+[36mstg_service_container |[0m   File "/src/stg_loader/repository/stg_repository.py", line 18, in currencies_insert
+[36mstg_service_container |[0m     cur.execute(
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 185, in wrap
+[36mstg_service_container |[0m     return func(self, *args, **kwargs)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 258, in execute
+[36mstg_service_container |[0m     operation = self.format_operation_with_parameters(operation, parameters)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 697, in format_operation_with_parameters
+[36mstg_service_container |[0m     raise ValueError(f'Invalid SQL: {operation}'
+[36mstg_service_container |[0m ValueError: Invalid SQL: 
+[36mstg_service_container |[0m                         INSERT INTO ST23052702__STAGING.currencies (
+[36mstg_service_container |[0m                             date_update,
+[36mstg_service_container |[0m                             currency_code,
+[36mstg_service_container |[0m                             currency_code_with,
+[36mstg_service_container |[0m                             currency_with_div
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                         VALUES (
+[36mstg_service_container |[0m                             %(date_update)s,
+[36mstg_service_container |[0m                             %(currency_code)s,
+[36mstg_service_container |[0m                             %(currency_code_with)s,
+[36mstg_service_container |[0m                             %(currency_with_div)s
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                     
+[36mstg_service_container |[0m HINT: When argument 'parameters' is a dict, variables in SQL should be specified with named (:name) placeholders. If you use a dict to represent the value of a ROW type column, enclose the dict with brackets('[]') to construct a list.
+[36mstg_service_container |[0m [2023-10-21 17:54:59,420] INFO in stg_message_processor_job: 2023-10-21 17:54:59.420805: START
+[36mstg_service_container |[0m [2023-10-21 17:54:59,421] INFO in stg_message_processor_job: 2023-10-21 17:54:59.421188: Message received
+[36mstg_service_container |[0m %7|1697910899.484|METADATA|someclientkey#consumer-1| [thrd:main]:   Topic transaction-service-input partition 0 Leader 1 Epoch 0
+[36mstg_service_container |[0m %7|1697910899.484|METADATA|someclientkey#consumer-1| [thrd:main]: sasl_ssl://rc1a-vnj01ua1un60cv7t.mdb.yandexcloud.net:9091/1: 1/1 requested topic(s) seen in metadata
+[36mstg_service_container |[0m Job "StgMessageProcessor.run (trigger: interval[0:00:25], next run at: 2023-10-21 17:55:24 UTC)" raised an exception
+[36mstg_service_container |[0m Traceback (most recent call last):
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 125, in run_job
+[36mstg_service_container |[0m     retval = job.func(*job.args, **job.kwargs)
+[36mstg_service_container |[0m   File "/src/stg_loader/stg_message_processor_job.py", line 45, in run
+[36mstg_service_container |[0m     self._stg_repository.currencies_insert(
+[36mstg_service_container |[0m   File "/src/stg_loader/repository/stg_repository.py", line 18, in currencies_insert
+[36mstg_service_container |[0m     cur.execute(
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 185, in wrap
+[36mstg_service_container |[0m     return func(self, *args, **kwargs)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 258, in execute
+[36mstg_service_container |[0m     operation = self.format_operation_with_parameters(operation, parameters)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 697, in format_operation_with_parameters
+[36mstg_service_container |[0m     raise ValueError(f'Invalid SQL: {operation}'
+[36mstg_service_container |[0m ValueError: Invalid SQL: 
+[36mstg_service_container |[0m                         INSERT INTO ST23052702__STAGING.currencies (
+[36mstg_service_container |[0m                             date_update,
+[36mstg_service_container |[0m                             currency_code,
+[36mstg_service_container |[0m                             currency_code_with,
+[36mstg_service_container |[0m                             currency_with_div
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                         VALUES (
+[36mstg_service_container |[0m                             %(date_update)s,
+[36mstg_service_container |[0m                             %(currency_code)s,
+[36mstg_service_container |[0m                             %(currency_code_with)s,
+[36mstg_service_container |[0m                             %(currency_with_div)s
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                     
+[36mstg_service_container |[0m HINT: When argument 'parameters' is a dict, variables in SQL should be specified with named (:name) placeholders. If you use a dict to represent the value of a ROW type column, enclose the dict with brackets('[]') to construct a list.
+[36mstg_service_container |[0m [2023-10-21 17:55:24,420] INFO in stg_message_processor_job: 2023-10-21 17:55:24.420676: START
+[36mstg_service_container |[0m [2023-10-21 17:55:24,421] INFO in stg_message_processor_job: 2023-10-21 17:55:24.421036: Message received
+[36mstg_service_container |[0m Job "StgMessageProcessor.run (trigger: interval[0:00:25], next run at: 2023-10-21 17:55:49 UTC)" raised an exception
+[36mstg_service_container |[0m Traceback (most recent call last):
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 125, in run_job
+[36mstg_service_container |[0m     retval = job.func(*job.args, **job.kwargs)
+[36mstg_service_container |[0m   File "/src/stg_loader/stg_message_processor_job.py", line 45, in run
+[36mstg_service_container |[0m     self._stg_repository.currencies_insert(
+[36mstg_service_container |[0m   File "/src/stg_loader/repository/stg_repository.py", line 18, in currencies_insert
+[36mstg_service_container |[0m     cur.execute(
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 185, in wrap
+[36mstg_service_container |[0m     return func(self, *args, **kwargs)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 258, in execute
+[36mstg_service_container |[0m     operation = self.format_operation_with_parameters(operation, parameters)
+[36mstg_service_container |[0m   File "/usr/local/lib/python3.10/site-packages/vertica_python/vertica/cursor.py", line 697, in format_operation_with_parameters
+[36mstg_service_container |[0m     raise ValueError(f'Invalid SQL: {operation}'
+[36mstg_service_container |[0m ValueError: Invalid SQL: 
+[36mstg_service_container |[0m                         INSERT INTO ST23052702__STAGING.currencies (
+[36mstg_service_container |[0m                             date_update,
+[36mstg_service_container |[0m                             currency_code,
+[36mstg_service_container |[0m                             currency_code_with,
+[36mstg_service_container |[0m                             currency_with_div
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                         VALUES (
+[36mstg_service_container |[0m                             %(date_update)s,
+[36mstg_service_container |[0m                             %(currency_code)s,
+[36mstg_service_container |[0m                             %(currency_code_with)s,
+[36mstg_service_container |[0m                             %(currency_with_div)s
+[36mstg_service_container |[0m                         )
+[36mstg_service_container |[0m                     
+[36mstg_service_container |[0m HINT: When argument 'parameters' is a dict, variables in SQL should be specified with named (:name) placeholders. If you use a dict to represent the value of a ROW type column, enclose the dict with brackets('[]') to construct a list.

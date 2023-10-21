@@ -1,0 +1,40 @@
+version: "3.9"
+
+services:
+  stg_service:
+    build:
+      context: ./service_stg
+      network: host
+    image: stg_service:local
+    container_name: stg_service_container
+    environment:
+      FLASK_APP: ${STG_SERVICE_APP_NAME:-stg_service}
+      DEBUG: ${STG_SERVICE_DEBUG:-True}
+
+      KAFKA_HOST: ${KAFKA_HOST}
+      KAFKA_PORT: ${KAFKA_PORT}
+      KAFKA_CONSUMER_USERNAME: ${KAFKA_CONSUMER_USERNAME}
+      KAFKA_CONSUMER_PASSWORD: ${KAFKA_CONSUMER_PASSWORD}
+      KAFKA_CONSUMER_GROUP: ${KAFKA_CONSUMER_GROUP}
+      KAFKA_SOURCE_TOPIC: ${KAFKA_SOURCE_TOPIC}
+
+      VERTICA_HOST: ${VERTICA_HOST}
+      VERTICA_PORT: ${VERTICA_PORT}
+      VERTICA_DBNAME: ${VERTICA_DBNAME}
+      VERTICA_USER: ${VERTICA_USER}
+      VERTICA_PASSWORD: ${VERTICA_PASSWORD}
+
+    network_mode: "bridge"
+    ports:
+      - "5011:5000"
+    restart: unless-stopped
+
+  de-final-proj:
+    image: cr.yandex/crp1r8pht0n0gl25aug1/de-final-prj:latest 
+    container_name: de-final-prj-local
+    ports:
+      - "8998:8998"
+      - "8280:8280"
+      - "15432:5432"
+    volumes:
+      - ./dags:/lessons/dags
