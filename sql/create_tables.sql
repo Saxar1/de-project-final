@@ -63,20 +63,8 @@ SEGMENTED BY HASH(date_update) ALL NODES;
 CREATE TABLE ST23052702__DWH.global_metrics (
     date_update DATE,
     currency_from VARCHAR(3),
-    amount_total DECIMAL(10, 2),
+    amount_total DECIMAL(12, 2),
     cnt_transactions INT,
-    avg_transactions_per_account DECIMAL(10, 2),
+    avg_transactions_per_account DECIMAL(12, 2),
     cnt_accounts_make_transactions INT
 );
-
--- Шаг 4: Обновление витрины global_metrics ежедневно инкрементом
-INSERT INTO ST23052702__DWH.global_metrics (date_update, currency_from, amount_total, cnt_transactions, avg_transactions_per_account, cnt_accounts_make_transactions)
-SELECT
-    DATEADD('day', -1, CURRENT_DATE) AS date_update,
-    t.currency_from,
-    SUM(t.amount) AS amount_total,
-    COUNT(t.transaction_id) AS cnt_transactions,
-    COUNT(t.transaction_id) / COUNT(DISTINCT t.user_id) AS avg_transactions_per_account,
-    COUNT(DISTINCT t.user_id) AS cnt_accounts_make_transactions
-FROM ST23052702__STAGING.transactions t
-GROUP BY t.currency_from;
